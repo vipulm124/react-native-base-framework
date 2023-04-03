@@ -2,22 +2,16 @@ import React from "react";
 import { View, Text, ScrollView, StyleSheet, SafeAreaView } from "react-native";
 import { NavigationContainer } from "@react-navigation/native";
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
-import Home from './components/Home';
-import About  from "./components/About";
+import Home from './src/Home';
+import About  from "./src/About";
+import Navigator from "./src/Navigator";
 
 const Stack = createNativeStackNavigator();
 
 function App(){
 return(
 
-    <NavigationContainer>
-      <Stack.Navigator>
-        <Stack.Screen
-          name="Home" component={Home}
-        />
-        <Stack.Screen name="About" component={About} />
-      </Stack.Navigator>
-    </NavigationContainer>
+   <Navigator/>
 
 )
 }
